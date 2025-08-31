@@ -3,8 +3,9 @@ Date: 30/08/2025 à 16h
 
 ## Projet: Création du répertoire: test-git
 
-## Sur Terminal de VSC !
-GitHub_Primo\test-git>:
+### Sur Terminal de VSC !
+
+&#10145; GitHub_Primo\test-git>:
 ```sh
 git init
 git remote add origin https://github.com/primo25ai/test-git.git

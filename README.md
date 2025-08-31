@@ -1,7 +1,7 @@
-#DOCUMENTATION
+#DOCUMENTATION;
 Date: 30/08/2025 à 16h
 
-Projet: Création du répertoire: test-git
+##Projet: Création du répertoire: test-git
 
 Sur Terminal de VSC !
 GitHub_Primo\test-git>:

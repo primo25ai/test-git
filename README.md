@@ -1,36 +1,46 @@
 # DOCUMENTATION &#9989;
-Date: 30/08/2025 à 16h
+
+Date: 11/01/2026 à 12h05
 
 ## Projet: Création du répertoire: test-git
 
-### Sur Terminal de VSC !
+## Prompt 1 : crée moi une landing page de type portfolio en html et css
 
-&#10145; GitHub_Primo\test-git>:
-```sh
-git init
-git remote add origin https://github.com/primo25ai/test-git.git
-git status
-git add index.html
-git status
-git commit -m "First Commit"
-git push
-git push --set-upstream origin master
-git diff /Montre les modifications de fichier qui ne sont pas encore indexées
-git add index.html
-git status
-git commit -m "2nd Commit"
-git status
-````
-```sh
-git push [alias] [branche] /Envoie tous les commits de la branche locale vers GitHub
-Enumerating objects: 5, done.
-Counting objects: 100% (5/5), done.
-Delta compression using up to 8 threads
-Compressing objects: 100% (2/2), done.
-Writing objects: 100% (3/3), 424 bytes | 141.00 KiB/s, done.
-Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
-To https://github.com/primo25ai/test-git.git
-   973d59b..e9e47e8  master -> master
-````
+Je vais vous créer une landing page portfolio moderne et professionnelle avec des animations subtiles et un design contemporain.J'ai créé une landing page portfolio moderne avec :
 
-Mise à jour réussi (local @ github) !!!
+**Caractéristiques principales :**
+
+- **Design moderne** avec dégradés violets/bleus tendance
+- **Navigation fixe** avec effet de transparence
+- **Section hero** avec animation de grille en arrière-plan
+- **Grille de projets** avec cartes interactives qui s'élèvent au survol
+- **Section compétences** avec icônes et animations
+- **Footer** avec liens sociaux
+- **Animations fluides** au chargement et au survol
+- **Responsive** pour tous les écrans
+- **Scroll smooth** pour une navigation fluide
+
+Le design est épuré, professionnel et met l'accent sur les animations subtiles pour créer une expérience engageante. Vous pouvez facilement personnaliser les couleurs, les textes et ajouter vos propres projets et informations !
+
+## Prompt 2 : sépare le fichier hmtl et le css
+
+Parfait ! J'ai séparé les fichiers pour vous :
+
+**Fichier 1 : index.html** (dans l'artifact ci-dessus)
+
+- Contient uniquement la structure HTML
+- Lien vers le fichier CSS externe avec `<link rel="stylesheet" href="style.css">`
+- JavaScript intégré pour les animations de scroll
+
+**Fichier 2 : style.css** (dans le second artifact)
+
+- Contient tous les styles CSS
+- Animations et media queries
+- Design responsive
+
+Pour utiliser ce portfolio, créez simplement deux fichiers dans le même dossier :
+
+1. `index.html` avec le contenu du premier artifact
+2. `style.css` avec le contenu du second artifact
+
+Le HTML fera automatiquement référence au CSS via la balise `<link>` dans le `<head>`. Vous pouvez maintenant modifier facilement les styles sans toucher à la structure HTML !

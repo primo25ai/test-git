@@ -10,42 +10,63 @@
     <header>
         <nav>
             <div class="logo">Portfolio</div>
-            <ul class="nav-links">
+            <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navLinks">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#accueil">Accueil</a></li>
                 <li><a href="#projets">Projets</a></li>
                 <li><a href="#competences">Compétences</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <div class="nav-backdrop" id="navBackdrop"></div>
         </nav>
     </header>
 
     <section id="accueil" class="hero">
         <div class="hero-content">
-            <h1>Bonjour, je suis Designer</h1>
-            <p>Créateur d'expériences digitales uniques</p>
-            <a href="#projets" class="cta-button">Voir mes projets</a>
+            <div class="hero-text">
+                <h1>Bonjour,<br>je suis Designer</h1>
+                <p>Créateur d'expériences digitales uniques</p>
+                <a href="#projets" class="cta-button">Voir mes projets</a>
+            </div>
+            <svg class="hero-mark" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="150" cy="150" r="120" stroke="#B44536" stroke-width="2" fill="none" class="draw-path" />
+                <line x1="30" y1="150" x2="270" y2="150" stroke="#FFFFFF" stroke-width="1.5" fill="none" class="draw-path" />
+                <line x1="150" y1="30" x2="150" y2="270" stroke="#FFFFFF" stroke-width="1.5" fill="none" class="draw-path" />
+                <polygon points="150,55 240,215 60,215" stroke="#B44536" stroke-width="2" fill="none" class="draw-path" />
+                <circle cx="150" cy="150" r="40" stroke="#FFFFFF" stroke-width="1.5" fill="none" class="draw-path" />
+            </svg>
         </div>
     </section>
 
     <section id="projets" class="section">
         <h2 class="section-title">Mes Projets</h2>
         <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-image">🎨</div>
+            <div class="project-card reveal">
+                <div class="project-image">
+                    <img src="images/img-ui-design.jpg" alt="Deux smartphones affichant des interfaces d'applications mobiles colorées" loading="lazy" />
+                </div>
                 <div class="project-content">
                     <h3>Projet Design UI</h3>
                     <p>Interface moderne pour une application mobile avec focus sur l'expérience utilisateur.</p>
                 </div>
             </div>
-            <div class="project-card">
-                <div class="project-image">💻</div>
+            <div class="project-card reveal">
+                <div class="project-image">
+                    <img src="images/img-web-app.jpg" alt="Écran de laptop affichant du code HTML et CSS dans un éditeur" loading="lazy" />
+                </div>
                 <div class="project-content">
                     <h3>Application Web</h3>
                     <p>Développement d'une plateforme e-commerce responsive et performante.</p>
                 </div>
             </div>
-            <div class="project-card">
-                <div class="project-image">🚀</div>
+            <div class="project-card reveal">
+                <div class="project-image">
+                    <img src="images/img-landing-page.jpg" alt="Équipe de designers travaillant sur des wireframes UX avec des post-its" loading="lazy" />
+                </div>
                 <div class="project-content">
                     <h3>Landing Page</h3>
                     <p>Page d'atterrissage optimisée pour la conversion avec animations fluides.</p>
@@ -55,27 +76,56 @@
     </section>
 
     <section id="competences" class="section skills">
-        <h2 class="section-title">Mes Compétences</h2>
-        <div class="skills-grid">
-            <div class="skill-item">
-                <div class="skill-icon">⚡</div>
-                <h3>Design UI/UX</h3>
-                <p>Création d'interfaces intuitives</p>
-            </div>
-            <div class="skill-item">
-                <div class="skill-icon">💡</div>
-                <h3>Développement Web</h3>
-                <p>HTML, CSS, JavaScript</p>
-            </div>
-            <div class="skill-item">
-                <div class="skill-icon">🎯</div>
-                <h3>Responsive Design</h3>
-                <p>Adaptation tous supports</p>
-            </div>
-            <div class="skill-item">
-                <div class="skill-icon">✨</div>
-                <h3>Animations</h3>
-                <p>Micro-interactions engageantes</p>
+        <div class="section-inner">
+            <h2 class="section-title">Mes Compétences</h2>
+            <div class="skills-grid">
+                <div class="skill-item reveal">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M8 32 Q8 20 20 20 Q32 20 32 8" />
+                            <circle cx="8" cy="32" r="3" />
+                            <circle cx="32" cy="8" r="3" />
+                            <line x1="8" y1="20" x2="8" y2="26" stroke-dasharray="2 2" />
+                            <line x1="32" y1="14" x2="32" y2="20" stroke-dasharray="2 2" />
+                        </svg>
+                    </div>
+                    <h3>Design UI/UX</h3>
+                    <p>Création d'interfaces intuitives</p>
+                </div>
+                <div class="skill-item reveal">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <polyline points="12,10 4,20 12,30" />
+                            <polyline points="28,10 36,20 28,30" />
+                            <line x1="22" y1="8" x2="18" y2="32" />
+                        </svg>
+                    </div>
+                    <h3>Développement Web</h3>
+                    <p>HTML, CSS, JavaScript</p>
+                </div>
+                <div class="skill-item reveal">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="2" y="6" width="36" height="24" rx="2" />
+                            <rect x="8" y="10" width="20" height="16" rx="1.5" />
+                            <rect x="14" y="14" width="10" height="14" rx="1" />
+                            <line x1="14" y1="36" x2="26" y2="36" />
+                        </svg>
+                    </div>
+                    <h3>Responsive Design</h3>
+                    <p>Adaptation tous supports</p>
+                </div>
+                <div class="skill-item reveal">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <polygon points="16,8 32,20 16,32" />
+                            <path d="M10 12 Q6 20 10 28" />
+                            <path d="M6 15 Q2 20 6 25" />
+                        </svg>
+                    </div>
+                    <h3>Animations</h3>
+                    <p>Micro-interactions engageantes</p>
+                </div>
             </div>
         </div>
     </section>
@@ -84,12 +134,33 @@
         <h2>Restons en contact</h2>
         <p>N'hésitez pas à me contacter pour vos projets</p>
         <div class="social-links">
-            <a href="#" title="Email">📧</a>
-            <a href="#" title="LinkedIn">💼</a>
-            <a href="#" title="GitHub">🔗</a>
-            <a href="#" title="Twitter">🐦</a>
+            <a href="#" title="Email">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                    <polyline points="2,4 12,13 22,4" />
+                </svg>
+            </a>
+            <a href="#" title="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="2" y="2" width="20" height="20" rx="3" />
+                    <line x1="8" y1="11" x2="8" y2="17" />
+                    <line x1="8" y1="7" x2="8" y2="7.01" stroke-width="2.5" />
+                    <path d="M12 17v-4c0-1.5 1-2.5 2.5-2.5S17 11.5 17 13v4" />
+                </svg>
+            </a>
+            <a href="#" title="GitHub">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.66-.22.66-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85 0 1.7.11 2.5.34 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85v2.75c0 .27.16.58.67.48A10 10 0 0022 12c0-5.52-4.48-10-10-10z" />
+                </svg>
+            </a>
+            <a href="#" title="X">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="4" y1="4" x2="20" y2="20" />
+                    <line x1="20" y1="4" x2="4" y2="20" />
+                </svg>
+            </a>
         </div>
-        <p style="margin-top: 2rem; opacity: 0.7;">© 2025 Portfolio. Tous droits réservés.</p>
+        <p class="footer-copy">&copy; 2025 Portfolio. Tous droits réservés.</p>
     </footer>
 
     <script>
@@ -98,21 +169,73 @@
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
         });
 
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.style.boxShadow = '0 2px 30px rgba(0, 0, 0, 0.15)';
-            } else {
-                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-            }
+            header.style.boxShadow = window.scrollY > 100
+                ? '0 1px 12px rgba(28, 28, 30, 0.08)'
+                : 'none';
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.reveal').forEach((el) => {
+            const siblings = el.parentElement.querySelectorAll('.reveal');
+            const index = Array.from(siblings).indexOf(el);
+            el.style.transitionDelay = (index * 0.12) + 's';
+            observer.observe(el);
+        });
+
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                if (window.scrollY >= section.offsetTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            navLinks.forEach(link => {
+                link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+            });
+        });
+
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinksList = document.getElementById('navLinks');
+        const navBackdrop = document.getElementById('navBackdrop');
+
+        function closeMenu() {
+            menuToggle.classList.remove('open');
+            navLinksList.classList.remove('open');
+            navBackdrop.classList.remove('open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+            document.body.classList.remove('menu-locked');
+        }
+
+        function toggleMenu() {
+            const isOpen = navLinksList.classList.toggle('open');
+            menuToggle.classList.toggle('open', isOpen);
+            navBackdrop.classList.toggle('open', isOpen);
+            menuToggle.setAttribute('aria-expanded', String(isOpen));
+            document.body.classList.toggle('menu-locked', isOpen);
+        }
+
+        menuToggle.addEventListener('click', toggleMenu);
+        navBackdrop.addEventListener('click', closeMenu);
+        navLinksList.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', closeMenu);
         });
     </script>
 </body>

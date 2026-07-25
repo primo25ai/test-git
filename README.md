@@ -1,46 +1,49 @@
-# DOCUMENTATION &#9989;
+# Portfolio — Designer & Développeur
 
-Date: 11/01/2026 à 12h05
+Landing page portfolio en HTML/CSS/JS vanilla, sans dépendances ni framework.
 
-## Projet: Création du répertoire: test-git
+## Aperçu
 
-## Prompt 1 : crée moi une landing page de type portfolio en html et css
+Site vitrine one-page pour un designer/développeur : hero avec mark géométrique animé, section projets, compétences et contact.
 
-Je vais vous créer une landing page portfolio moderne et professionnelle avec des animations subtiles et un design contemporain.J'ai créé une landing page portfolio moderne avec :
+## Design
 
-**Caractéristiques principales :**
+- **Palette** — neutres chauds (encre `#1C1C1E`, pierre `#EDEAE5`, papier `#FAFAF8`) avec un accent unique rouge oxyde `#B44536`
+- **Typographie** — [Syne](https://fonts.google.com/specimen/Syne) (titres, display) + [Inter](https://fonts.google.com/specimen/Inter) (texte courant), chargées via Google Fonts
+- **Signature visuelle** — mark géométrique SVG (cercle, croix, triangle) qui se dessine au chargement du hero
+- **Photos** — images libres de droit (Unsplash) illustrant chaque projet, arrière-plan du hero
+- **Animations** — révélation au scroll (IntersectionObserver), micro-interactions au survol, `prefers-reduced-motion` respecté
 
-- **Design moderne** avec dégradés violets/bleus tendance
-- **Navigation fixe** avec effet de transparence
-- **Section hero** avec animation de grille en arrière-plan
-- **Grille de projets** avec cartes interactives qui s'élèvent au survol
-- **Section compétences** avec icônes et animations
-- **Footer** avec liens sociaux
-- **Animations fluides** au chargement et au survol
-- **Responsive** pour tous les écrans
-- **Scroll smooth** pour une navigation fluide
+## Structure
 
-Le design est épuré, professionnel et met l'accent sur les animations subtiles pour créer une expérience engageante. Vous pouvez facilement personnaliser les couleurs, les textes et ajouter vos propres projets et informations !
+```
+index.html          Structure de la page (hero, projets, compétences, contact)
+style.css           Palette, typographie, layout, animations, responsive
+images/hero-bg.jpg   Image d'arrière-plan du hero
+images/img-*.jpg     Illustrations des cartes projets
+```
 
-## Prompt 2 : sépare le fichier hmtl et le css
+## Sections
 
-Parfait ! J'ai séparé les fichiers pour vous :
+- **Accueil** — hero plein écran avec mark animé et CTA
+- **Projets** — grille de 3 cartes avec photo, titre et description
+- **Compétences** — grille de 4 compétences avec icônes SVG
+- **Contact** — liens sociaux et informations de contact
 
-**Fichier 1 : index.html** (dans l'artifact ci-dessus)
+## Responsive
 
-- Contient uniquement la structure HTML
-- Lien vers le fichier CSS externe avec `<link rel="stylesheet" href="style.css">`
-- JavaScript intégré pour les animations de scroll
+- Breakpoints à 768px et 480px
+- Menu hamburger sous 768px (panneau latéral avec overlay)
+- Typographie fluide (`clamp()`), grilles en colonne unique sur mobile
 
-**Fichier 2 : style.css** (dans le second artifact)
+## Lancer le projet en local
 
-- Contient tous les styles CSS
-- Animations et media queries
-- Design responsive
+Aucune installation requise — fichiers statiques servis par n'importe quel serveur HTTP :
 
-Pour utiliser ce portfolio, créez simplement deux fichiers dans le même dossier :
+```sh
+python -m http.server 8080
+```
 
-1. `index.html` avec le contenu du premier artifact
-2. `style.css` avec le contenu du second artifact
+Puis ouvrir [http://localhost:8080](http://localhost:8080).
 
-Le HTML fera automatiquement référence au CSS via la balise `<link>` dans le `<head>`. Vous pouvez maintenant modifier facilement les styles sans toucher à la structure HTML !
+Une configuration `.claude/launch.json` est fournie pour lancer le serveur automatiquement depuis Claude Code.
